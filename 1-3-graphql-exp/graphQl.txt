@@ -1,0 +1,55 @@
+query{
+  team(id: 3){
+    id
+    manager
+    office
+    extension_number
+    mascot
+    cleaning_duty
+    project
+  }
+}
+
+# query{
+#   teams{
+#     id
+#     manager
+#     extension_number
+#     mascot
+#     members{
+#       first_name
+#       last_name
+#     }
+#   }
+# }
+
+#한번에 요청에 여러 데이터들을 함꼐 받아올 수있다.
+# query{
+#   teams{
+#     id
+#     manager
+#   }
+#   roles{
+#     id
+#     requirement
+#   }
+# }
+
+# mutation {
+#   #postTeam이라는 명령어에
+#   postTeam (input: {
+#     manager: "John Smith"
+#     office: "104B"
+#     extension_number: "#9982"
+#     mascot: "Dragon"
+#     cleaning_duty: "Monday"
+#     project: "Lordaeron"
+#   }) {
+#     manager
+#     office
+#     extension_number
+#     mascot
+#     cleaning_duty
+#     project
+#   }
+# }
